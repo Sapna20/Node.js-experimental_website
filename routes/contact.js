@@ -11,13 +11,13 @@ router.post('/send', function (req, res, next){
         //servicr and credentials
         service: 'Gmail',
         auth: {
-            user: '208sapna@gmail.com',
-            pass: '21052017$' 
+            user: 'yourusername@gmail.com', //specify email id of sender
+            pass: '************'            //specify password of sender's email id
         }
     });
     var mailOp = {
-        from: 'app-websiite - <208sapna@gmail.com>',
-        to: 'sapna20@outlook.com',
+        from: 'app-websiite - <yourusername@gmail.com>',
+        to: 'username@outlook.com',     //specify receivers username
         subject: 'Contact Form',
         text: 'you have new mwssaage fro yourselg'+req.body.name+'@gmail.com\n'+'Email: '+req.body.email+'Message'+req.body.message,
         html: '<h3>You have new mwssagw !</h3><br/><ul><li>From: '+req.body.name+'@gmail.com</li><li>'+'Email : '+req.body.email+'</li><li><p>'+req.body.message+'</p></li></ul>'
